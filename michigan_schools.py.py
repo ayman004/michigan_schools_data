@@ -109,6 +109,7 @@ df.columns = ['School Name', 'Contacts']
 df = df.drop_duplicates()
 df.to_csv('contacts.csv', index=False)
 
+
 #Calculates the time that the script takes to run
 finish = time.time()	
 print("it took:{0} seconds".format(str(finish - start)))
