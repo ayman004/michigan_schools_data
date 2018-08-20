@@ -1,4 +1,5 @@
 #Import all the required libraries
+from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import pandas as pd
@@ -107,7 +108,16 @@ df.columns = ['School Name', 'Contacts']
 	
 #Drop duplicates
 df = df.drop_duplicates()
+
+#Give a filename based on current timestamp
+now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+now = now.replace(':','-')
+now = 'Contacts at '+now+'.csv'
+df.to_csv(now, index=False)
+
+'''Or you could just do this
 df.to_csv('contacts.csv', index=False)
+'''
 
 
 #Calculates the time that the script takes to run
