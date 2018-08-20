@@ -115,9 +115,9 @@ now = now.replace(':','-')
 now = 'Contacts at '+now+'.csv'
 df.to_csv(now, index=False)
 
-'''Or you could just do this
-df.to_csv('contacts.csv', index=False)
-'''
+#Or you could just do this
+#df.to_csv('contacts.csv', index=False)
+
 
 
 #Calculates the time that the script takes to run
