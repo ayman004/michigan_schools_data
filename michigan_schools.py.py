@@ -17,7 +17,7 @@ browser = webdriver.Firefox()
 #read the csv
 schools = pd.read_csv('schools.csv')
 schools = schools.drop_duplicates()
-
+schools = schools.reset_index(drop=True)
 record = []
 
 print('School Name\t\t\t\t\t\t\tContacts')
